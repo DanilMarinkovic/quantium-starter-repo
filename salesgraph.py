@@ -3,9 +3,6 @@ import plotly.express as px
 import pandas as pd
 
 app = Dash()
-
-# assume you have a "long-form" data frame
-# see https://plotly.com/python/px-arguments/ for more options
 df=pd.read_csv("output.csv")
 df["sales"] = df["sales"].str.replace(r'\$', '', regex=True).astype(float)
 df["date"] = pd.to_datetime(df["date"])
