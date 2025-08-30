@@ -25,7 +25,13 @@ app.layout = html.Div(
         style={"backgroundColor": "#000000"}
     ),
     dcc.RadioItems(
-        options=["north", "south", "east", "west", "all"],
+        options=[
+            {"label":"North", "value":"north"}, 
+            {"label":"South", "value":"south"}, 
+            {"label":"East", "value":"east"}, 
+            {"label":"West", "value":"west"}, 
+            {"label":"All Regions", "value":"all"}
+        ],
         value="all",
         id="region-selector",
         style={"textAlign": "center"},
